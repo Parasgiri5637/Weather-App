@@ -1,0 +1,21 @@
+.footer {
+  text-align: center;
+  margin: 0 1em 1em 1em;
+
+  .footerText,
+  .footerImgText {
+    font-size: var(--small-Font-Size);
+    color: var(--on-surface-variant);
+    font-family: 500;
+    letter-spacing: 1px;
+  }
+  .footerImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .footerLogo {
+      width: 10rem;
+    }
+  }
+}

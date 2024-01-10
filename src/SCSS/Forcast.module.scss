@@ -1,0 +1,51 @@
+@import "Mixing.scss";
+
+.forcastTitle {
+  font-size: var(--title-Font-Size);
+  font-weight: var(--font-weight-title);
+  margin-block: 1em;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 320px) {
+  .forcast {
+    @include bg-style;
+  }
+  .forcastDays {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5em;
+    }
+    p {
+      font-size: var(--medium-Font-Size);
+    }
+
+    .forcastTemp {
+      display: flex;
+      gap: 1em;
+      align-items: center;
+
+      img {
+        width: 2.5rem;
+      }
+      p {
+        font-weight: var(--font-weight-title);
+      }
+    }
+    .forcastDate {
+      justify-self: center;
+      color: var(--on-surface-variant);
+      font-weight: var(--font-weight-title);
+    }
+    .forcastDay {
+      justify-self: end;
+      color: var(--on-surface-variant);
+      font-weight: var(--font-weight-title);
+      letter-spacing: 1px;
+    }
+  }
+}

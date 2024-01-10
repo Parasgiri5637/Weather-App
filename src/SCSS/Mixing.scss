@@ -1,0 +1,21 @@
+@import "src/index.scss";
+
+@mixin bg-style {
+  background-color: var(--white-alpha-4);
+  padding: 2em;
+  border-radius: var(--border-radius);
+}
+
+@mixin title-style {
+  font-size: var(--title-Font-Size-2);
+  color: var(--on-surface-variant);
+  letter-spacing: 1px;
+  font-size: 500;
+}
+
+@mixin box-style {
+  background-color: var(--surface);
+  border-radius: var(--border-radius);
+  box-shadow: 1px 2px 2px var(--white-alpha-8);
+  padding: 2em;
+}

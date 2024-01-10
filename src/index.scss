@@ -1,0 +1,103 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; //* 10px
+}
+
+:root {
+  --primary: #b5a1e5;
+  --on-primary: #100e17;
+  --background: #131214;
+  --on-background: #eae6f2;
+  --surface: #1d1c1f;
+  --on-surface: #dddae5;
+  --on-surface-variant: #7b7980;
+  --on-surface-variant-2: #b9b6bf;
+  --outline: #3e3d40;
+  --white: hsl(0, 0%, 100%);
+  --white-alpha-4: hsla(0, 0%, 100%, 0.04);
+  --white-alpha-8: #94898914;
+  --black-alpha-10: hsla(0, 0%, 0%, 0.1);
+
+  //   Border Radious
+  --border-radius: 2rem;
+  //* Font Size
+  --small-Font-Size: 1.2rem;
+  --small-Font-Size-2: 1rem;
+
+  --medium-Font-Size: 1.4rem;
+  --large-Font-Size: 2.7rem;
+
+  --icons-Font-Size: 4rem;
+
+  --title-Font-Size: 1.8rem;
+  --title-Font-Size-2: 1.3rem;
+
+  --hourlyImg-width: 5rem;
+
+  /* Font family */
+  --font-weight-title: 200;
+}
+
+a,
+span,
+img,
+input,
+button {
+  display: block;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+input {
+  width: 100%;
+  background-color: transparent;
+}
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--white);
+  font-family: sans-serif;
+}
+
+.main {
+  margin: 1.5em;
+}
+
+@media (min-width: 992px) {
+  .main {
+    display: grid;
+    grid-template-columns: 28rem minmax(0, 1fr);
+    gap: 2rem;
+  }
+}
+
+//* ========================================= Scroll Bar
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--white-alpha-8);
+  border-radius: 2rem;
+}

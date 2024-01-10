@@ -1,0 +1,134 @@
+@import "Mixing.scss";
+
+@media (min-width: 320px) {
+  .highlights {
+    @include bg-style;
+    margin-block: 1em;
+
+    .highLightsBox1 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      gap: 2em;
+    }
+    .highLightsBox2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      margin-top: 2em;
+      gap: 2em;
+    }
+  }
+  .highlightsTitle {
+    font-size: var(--title-Font-Size);
+    letter-spacing: 1px;
+  }
+  //*==================================== Air Quality Index
+  .airIndex {
+    @include box-style;
+    .airIndexTitle {
+      @include title-style;
+    }
+  }
+  .airIndexHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .airIndexStatus {
+    background-color: var(--primary);
+    border-radius: var(--border-radius);
+    padding: 0.3em 0.5em;
+    font-size: var(--title-Font-Size-2);
+    color: black;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  .airIndexDetails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+    gap: 3em;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    .airIcon {
+      font-size: var(--icons-Font-Size);
+    }
+  }
+  .airIndexData {
+    text-align: center;
+    .airIndexText {
+      font-size: var(--small-Font-Size-2);
+      color: var(--on-surface-variant);
+      letter-spacing: 1px;
+      font-weight: 500;
+      margin-bottom: 0.5em;
+    }
+    .airIndexNum {
+      font-size: var(--large-Font-Size);
+    }
+  }
+
+  //*==================================== Sunrice & Sunset Time
+  .sunTime {
+    @include box-style;
+    .sunTimeTitle {
+      @include title-style;
+    }
+
+    .sunTimeDetails {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      margin-top: 2em;
+      gap: 2em;
+
+      .sunTimeBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .sunTimeIcon {
+      font-size: var(--icons-Font-Size);
+    }
+    .sunTimeText {
+      font-size: var(--small-Font-Size-2);
+      color: var(--on-surface-variant);
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .sunTimeDate {
+      font-size: var(--large-Font-Size);
+      margin-top: 0.3em;
+    }
+  }
+
+  //* ======================================= highLightsBox2
+  .infoBox {
+    @include box-style;
+
+    .infoText {
+      @include title-style;
+    }
+
+    .infoData {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 2em;
+    }
+
+    .infoIcon {
+      font-size: var(--icons-Font-Size);
+    }
+    .infoNum {
+      font-size: var(--large-Font-Size);
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .highlights {
+    margin-block: 0 1em;
+  }
+}

@@ -1,0 +1,59 @@
+@import "Mixing.scss";
+
+@media (min-width: 320px) {
+  .currentWeather {
+    @include bg-style;
+    .temp {
+      font-size: var(--title-Font-Size);
+      font-weight: var(--font-weight-title);
+    }
+  }
+  .currentTempBox {
+    border-bottom: 2px solid var(--white-alpha-8);
+    margin-bottom: 0.8em;
+
+    .currentTempDetails {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+
+      img {
+        width: 8rem;
+        justify-self: center;
+      }
+    }
+    .currentTemp {
+      font-size: 5rem;
+      sup {
+        font-size: 3rem;
+      }
+    }
+    .tempStatus {
+      font-size: var(--small-Font-Size);
+      letter-spacing: 2px;
+      font-weight: 500;
+      margin-bottom: 1em;
+      color: var(--on-surface-variant-2);
+    }
+  }
+  .currentTempSubDetails {
+    .currentTempDate,
+    .currentTempCity {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      font-size: var(--small-Font-Size);
+      color: var(--on-surface-variant-2);
+      letter-spacing: 2px;
+      font-weight: 500;
+    }
+
+    .currentTempDate {
+      margin-bottom: 1em;
+    }
+  }
+  .cityIcon,
+  .dateIcon {
+    font-size: 1.5rem;
+  }
+}
